@@ -43,4 +43,12 @@ class Usuario
      */
     private $nif;
 
+    /**
+     * @var Local[]
+     * @ORM\ManyToMany(targetEntity="AppBundle\Entity\Local", inversedBy="usuarios")
+     * @ORM\JoinColumn(nullable=false)
+     */
+
+    private $locales;
+
 }

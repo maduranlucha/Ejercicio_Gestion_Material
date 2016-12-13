@@ -29,4 +29,11 @@ class Estado
      */
     private $nombre;
 
+    /**
+     * @var Material[]
+     * @ORM\OneToMany(targetEntity="Material", mappedBy="estado")
+     */
+
+    private $material;
+
 }

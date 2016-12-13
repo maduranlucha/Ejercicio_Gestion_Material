@@ -35,4 +35,13 @@ class Proveedor
      * @ORM\Column(name="cif", type="string", length=12)
      */
     private $cif;
+
+
+    /**
+     * @var Material[]
+     * @ORM\ManyToMany(targetEntity="Material", mappedBy="proveedores")
+     * @ORM\JoinColumn(nullable=false)
+     */
+
+    private $materiales;
 }

@@ -28,4 +28,15 @@ class Planta
      * @ORM\Column(name="nombre", type="string", length=255)
      */
     private $nombre;
+
+    /**
+     * @var Local[]
+     * @ORM\OneToMany(targetEntity="Local", mappedBy="planta")
+     */
+
+    private $local;
+
+
+
 }
+

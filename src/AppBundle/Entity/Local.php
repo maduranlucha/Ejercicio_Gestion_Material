@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Asset\Package;
 use Symfony\Component\Validator\Constraints\DateTime;
 
 /**
@@ -36,4 +37,26 @@ class Local
      */
     private $descripcion;
 
+    /**
+     * @var Planta
+     * @ORM\ManyToOne(targetEntity="Planta", inversedBy="local")
+     */
+    private $planta;
+
+    /**
+     * @var Usuario []
+     * @ORM\ManyToMany(targetEntity="Usuario" , mappedBy="locales")
+     * @ORM\JoinColumn(nullable=false)
+     */
+
+    private $usuarios;
+
+    /**
+     * @var Material[]
+     * @ORM\OneToMany(targetEntity="Material", mappedBy="local")
+     */
+
+    private $local;
+
 }
+

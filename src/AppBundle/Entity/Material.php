@@ -71,4 +71,25 @@ class Material
      */
     private $fecha_baja;
 
+    /**
+     * @var Local
+     * @ORM\ManyToOne(targetEntity="Local", inversedBy="local")
+     */
+
+    private $local;
+
+    /**
+     * @var Estado
+     * @ORM\ManyToOne(targetEntity="Estado", inversedBy="material")
+     */
+
+    private $estado;
+
+    /**
+     * @var proveedor[]
+     * @ORM\ManyToMany(targetEntity="Proveedor", inversedBy="materiales")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $proveedores;
+
 }
