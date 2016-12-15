@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraints\DateTime;
 /**
  * Usuario
  *
- * @ORM\Table(name="usurio")
+ * @ORM\Table(name="usuario")
  * @ORM\Entity
  */
 class Usuario

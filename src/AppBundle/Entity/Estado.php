@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraints\DateTime;
 /**
  * Estado
  *
- * @ORM\Table(name="material")
+ * @ORM\Table(name="estado")
  * @ORM\Entity
  */
 class Estado
